@@ -9,11 +9,20 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    cell.cpp \
+    config.cpp \
+    grid.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    square.cpp
 
 HEADERS += \
-    mainwindow.h
+    cell.h \
+    config.h \
+    constants.h \
+    grid.h \
+    mainwindow.h \
+    square.h
 
 FORMS += \
     mainwindow.ui
@@ -22,3 +31,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    config.txt
